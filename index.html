@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div id="landing-screen" class="screen active">
+        <div class="glass-card main-card fade-in">
+            <div class="header-text">
+                <p class="subtitle">Together with their families</p>
+                <h1 class="names">Garima <span class="ampersand">&</span> Ankit</h1>
+                <p class="subtitle">invite you to celebrate their wedding</p>
+            </div>
+            
+            <div class="selection-area">
+                <p class="selection-prompt">Please select your itinerary</p>
+                <div class="buttons">
+                    <button id="btn-bride" class="btn primary-btn">Bride's Guests</button>
+                    <button id="btn-groom" class="btn primary-btn">Groom's Guests</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="itinerary-screen" class="screen hidden">
+        <div class="glass-card itinerary-card">
+            <button id="btn-back" class="btn-text">← Back</button>
+            
+            <div class="itinerary-header">
+                <div class="ornament">
+                    <span class="ornament-line"></span>
+                    <span class="ornament-icon">✦</span>
+                    <span class="ornament-line"></span>
+                </div>
+                <span id="itinerary-subtitle" class="section-subtitle">Your Schedule of Events</span>
+                <h2 id="itinerary-title" class="section-title">Events</h2>
+                <div class="divider">
+                    <span class="divider-dot"></span>
+                    <span class="divider-line"></span>
+                </div>
+            </div>
+
+            <div id="events-container" class="events-list">
+                <!-- Events will be populated here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
