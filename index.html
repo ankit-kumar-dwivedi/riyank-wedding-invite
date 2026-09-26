@@ -3,56 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Invitation</title>
+    <title>Garima & Ankit - Wedding Invitation</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
-    <div id="landing-screen" class="screen active">
-        <div class="glass-card main-card fade-in">
-            <div class="header-text">
-                <p class="subtitle">Together with their families</p>
-                <h1 class="names">Garima <span class="ampersand">&</span> Ankit</h1>
-                <p class="subtitle">invite you to celebrate their wedding</p>
-            </div>
+    <!-- 1. Selection Screen -->
+    <div id="selection-screen" class="screen active watercolor-bg">
+        <!-- Decorative Flowers -->
+        <img class="floral-decor top-right" src="assets/flower-pastel.png" alt="flowers">
+        
+        <div class="fade-in frame-container">
+            <!-- Overlapping geometric frames -->
+            <div class="frame frame-1"></div>
+            <div class="frame frame-2"></div>
             
-            <div class="selection-area">
-                <p class="selection-prompt">Please select your itinerary</p>
-                <div class="buttons">
-                    <button id="btn-bride" class="btn primary-btn">Bride's Guests</button>
-                    <button id="btn-groom" class="btn primary-btn">Groom's Guests</button>
+            <div class="content-box">
+                <div class="header-text">
+                    <div class="ganesha-icon">
+                        <img class="blend-image" src="assets/ganesha-pastel.png" width="100" alt="Ganesha">
+                        <p class="ganesha-text">श्री गणेशाय नम:</p>
+                    </div>
+                    <h1 class="names">Garima <br><span class="weds">Weds</span><br> Ankit</h1>
+                </div>
+                
+                <div class="selection-area">
+                    <p class="selection-prompt">Please select your itinerary</p>
+                    <div class="buttons">
+                        <a href="bride.html" id="btn-bride" class="btn primary-btn">Bride's Guests</a>
+                        <a href="groom.html" id="btn-groom" class="btn primary-btn">Groom's Guests</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <img class="floral-decor bottom-left" src="assets/flower-pastel.png" alt="flowers">
     </div>
 
-    <div id="itinerary-screen" class="screen hidden">
-        <div class="glass-card itinerary-card">
-            <button id="btn-back" class="btn-text">← Back</button>
-            
-            <div class="itinerary-header">
-                <div class="ornament">
-                    <span class="ornament-line"></span>
-                    <span class="ornament-icon">✦</span>
-                    <span class="ornament-line"></span>
-                </div>
-                <span id="itinerary-subtitle" class="section-subtitle">Your Schedule of Events</span>
-                <h2 id="itinerary-title" class="section-title">Events</h2>
-                <div class="divider">
-                    <span class="divider-dot"></span>
-                    <span class="divider-line"></span>
-                </div>
-            </div>
-
-            <div id="events-container" class="events-list">
-                <!-- Events will be populated here by JavaScript -->
-            </div>
-        </div>
-    </div>
+    <!-- Invitation Screen is moved to invitation.html -->
 
     <script src="script.js"></script>
 </body>
