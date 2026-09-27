@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bride's Itinerary — Garima & Ankit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
         .side-banner {
@@ -28,6 +31,7 @@
             letter-spacing: 0.18em;
             text-transform: uppercase;
         }
+
         .side-banner .dot {
             width: 6px;
             height: 6px;
@@ -35,10 +39,14 @@
             background: #f4c3d6;
             display: inline-block;
         }
+
         /* Push body content below fixed banner */
-        body { padding-top: 42px; }
+        body {
+            padding-top: 42px;
+        }
     </style>
 </head>
+
 <body class="scroll-enabled">
 
     <!-- Side Indicator Banner -->
@@ -79,6 +87,12 @@
         <div class="hero-photo-container">
             <img src="assets/couple.png" alt="Garima & Ankit" class="couple-photo">
         </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll for Itinerary</span>
+            <div class="arrow">↓</div>
+        </div>
     </section>
 
     <!-- Itinerary Section -->
@@ -108,12 +122,25 @@
                 <span class="ornament-line"></span>
             </div>
             <h2 class="section-title">Counting Down To Forever</h2>
+            <div class="date-badge" style="margin: 15px auto 0; font-size: 1.8rem;">05 December 2026</div>
         </div>
         <div id="countdown" class="countdown-container">
-            <div class="time-box"><h3 id="days">00</h3><p>DAYS</p></div>
-            <div class="time-box"><h3 id="hours">00</h3><p>HOURS</p></div>
-            <div class="time-box"><h3 id="minutes">00</h3><p>MINUTES</p></div>
-            <div class="time-box"><h3 id="seconds">00</h3><p>SECONDS</p></div>
+            <div class="time-box">
+                <h3 id="days">00</h3>
+                <p>DAYS</p>
+            </div>
+            <div class="time-box">
+                <h3 id="hours">00</h3>
+                <p>HOURS</p>
+            </div>
+            <div class="time-box">
+                <h3 id="minutes">00</h3>
+                <p>MINUTES</p>
+            </div>
+            <div class="time-box">
+                <h3 id="seconds">00</h3>
+                <p>SECONDS</p>
+            </div>
         </div>
     </section>
 
@@ -121,6 +148,13 @@
         <img class="floral-decor bottom-left" src="assets/flower-pastel.png" alt="flowers">
         <p>We look forward to celebrating with you!</p>
         <h2 class="footer-names">Garima & Ankit</h2>
+
+        <div class="credits">
+            Designed by <span class="tooltip"
+                data-tooltip="Riya is Garima's nickname at home, you know? 😉">Riya</span><br>
+            Deployed by Ankit<br>
+            Made with love by <span class="hashtag">#Riyank</span>
+        </div>
     </footer>
 
     <script src="script.js"></script>
@@ -129,4 +163,5 @@
         renderEvents(brideEvents);
     </script>
 </body>
+
 </html>
