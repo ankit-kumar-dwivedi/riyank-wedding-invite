@@ -296,12 +296,24 @@ section {
     color: var(--primary-color);
 }
 
+.venue-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.venue-link:hover .venue-text {
+    color: var(--primary-color);
+}
+
 .venue-text {
     font-family: var(--font-sans);
     font-size: 0.9rem;
     color: var(--text-dark);
     display: block;
     margin-top: 5px;
+    transition: color 0.3s ease;
 }
 
 .greeting {
@@ -541,12 +553,24 @@ section {
     margin-bottom: 8px;
 }
 
+.event-venue-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.event-venue-link:hover .event-venue {
+    color: var(--primary-color);
+}
+
 .event-venue {
     font-family: var(--font-serif);
     font-style: italic;
     font-size: 1.05rem;
     color: var(--text-dark);
     margin-bottom: 22px;
+    transition: color 0.3s ease;
 }
 
 .btn-directions {

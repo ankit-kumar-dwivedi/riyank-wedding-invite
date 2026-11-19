@@ -9,6 +9,13 @@ const ceremonyMeta = {
     "Wedding Ceremony": { icon: "💍", image: "assets/wedding.png", scale: 1.5 }
 };
 
+// Location Map Links
+const MAP_LINKS = {
+    bhagwati: "https://www.google.com/maps/place/Bhagwati+Apartment/@28.502861,77.1818727,736m/data=!3m2!1e3!4b1!4m6!3m5!1s0x390d1f00442b1ce5:0xcb1e136a17794ef7!8m2!3d28.502861!4d77.1844476!16s%2Fg%2F11whjk4yl9?entry=ttu&g_ep=EgoyMDI2MTExNi4wIKXMDSoASAFQAw%3D%3D",
+    gumbers: "https://www.google.com/maps/place/Gumbers+Farm+New+Delhi/@28.4554295,77.1994839,736m/data=!3m2!1e3!4b1!4m9!3m8!1s0x390ce15b190680af:0x440a4e5804afc1b!5m2!4m1!1i2!8m2!3d28.4554295!4d77.2020588!16s%2Fg%2F11m4g5ztnv?entry=ttu&g_ep=EgoyMDI2MTExNi4wIKXMDSoASAFQAw%3D%3D",
+    alllure: "https://www.google.com/maps/place/ALLLURE+RAAKESH+FARMS/@28.4752544,77.1853342,736m/data=!3m2!1e3!4b1!4m6!3m5!1s0x390d1fc8e1490663:0x646c940e0b977314!8m2!3d28.4752544!4d77.1879091!16s%2Fg%2F1hhhs4k8v?entry=ttu&g_ep=EgoyMDI2MTExNi4wIKXMDSoASAFQAw%3D%3D"
+};
+
 // Data for the events
 const brideEvents = [
     {
@@ -16,7 +23,7 @@ const brideEvents = [
         date: "Wednesday, December 2, 2026",
         time: "4:00 PM",
         venue: "Bhagwati Apartment, Chhatarpur",
-        link: "https://maps.app.goo.gl/52GPUQLXstJevaf8A",
+        link: MAP_LINKS.bhagwati,
         image: "assets/function-images/bangle-ceremony-garima.jpeg"
     },
     {
@@ -24,7 +31,7 @@ const brideEvents = [
         date: "Thursday, December 3, 2026",
         time: "10:00 AM",
         venue: "Gumbers Farm, Chattarpur",
-        link: "https://maps.app.goo.gl/Dp9wFpvBLddt8b557",
+        link: MAP_LINKS.gumbers,
         image: "assets/function-images/sagan-tilak.jpeg"
     },
     {
@@ -32,7 +39,7 @@ const brideEvents = [
         date: "Friday, December 4, 2026",
         time: "10:00 AM",
         venue: "Bhagwati Apartment, Chhatarpur",
-        link: "https://maps.app.goo.gl/52GPUQLXstJevaf8A",
+        link: MAP_LINKS.bhagwati,
         image: "assets/function-images/haldi-garima.jpeg"
     },
     {
@@ -40,7 +47,7 @@ const brideEvents = [
         date: "Friday, December 4, 2026",
         time: "4:00 PM",
         venue: "Bhagwati Apartment, Chhatarpur",
-        link: "https://maps.app.goo.gl/52GPUQLXstJevaf8A",
+        link: MAP_LINKS.bhagwati,
         image: "assets/function-images/mahendi-garima.jpeg"
     },
     {
@@ -48,7 +55,7 @@ const brideEvents = [
         date: "Saturday, December 5, 2026",
         time: "7:00 PM",
         venue: "Alllure Raakesh Farms, Chattarpur",
-        link: "https://maps.app.goo.gl/W88CM6vASKW1nsMj7",
+        link: MAP_LINKS.alllure,
         image: "assets/function-images/wedding.jpeg"
     }
 ];
@@ -59,7 +66,7 @@ const groomEvents = [
         date: "Thursday, December 3, 2026",
         time: "10:00 AM",
         venue: "Gumbers Farm, Chattarpur",
-        link: "https://maps.app.goo.gl/Dp9wFpvBLddt8b557",
+        link: MAP_LINKS.gumbers,
         image: "assets/function-images/sagan-tilak.jpeg"
     },
     {
@@ -67,7 +74,7 @@ const groomEvents = [
         date: "Thursday, December 3, 2026",
         time: "8:00 PM",
         venue: "Gumbers Farm, Chattarpur",
-        link: "https://maps.app.goo.gl/Dp9wFpvBLddt8b557",
+        link: MAP_LINKS.gumbers,
         image: "assets/function-images/sangeet-ankit.jpeg"
     },
     {
@@ -75,7 +82,7 @@ const groomEvents = [
         date: "Friday, December 4, 2026",
         time: "12:00 PM",
         venue: "Gumbers Farm, Chattarpur",
-        link: "https://maps.app.goo.gl/Dp9wFpvBLddt8b557",
+        link: MAP_LINKS.gumbers,
         image: "assets/function-images/haldi-ankit.jpeg"
     },
     {
@@ -83,7 +90,7 @@ const groomEvents = [
         date: "Saturday, December 5, 2026",
         time: "7:00 PM",
         venue: "Alllure Raakesh Farms, Chattarpur",
-        link: "https://maps.app.goo.gl/W88CM6vASKW1nsMj7",
+        link: MAP_LINKS.alllure,
         image: "assets/function-images/wedding.jpeg"
     }
 ];
@@ -121,8 +128,10 @@ function renderEvents(events) {
                 <h3 class="event-name">${event.name}</h3>
                 <div class="event-date">${event.date} | ${event.time}</div>
                 ${dressCodeHtml}
-                <div class="event-venue">${event.venue}</div>
-                <a href="${event.link}" target="_blank" class="btn-directions">
+                <a href="${event.link}" target="_blank" rel="noopener noreferrer" class="event-venue-link">
+                    <div class="event-venue">${event.venue}</div>
+                </a>
+                <a href="${event.link}" target="_blank" rel="noopener noreferrer" class="btn-directions">
                     📍 Get Directions
                 </a>
             </div>
